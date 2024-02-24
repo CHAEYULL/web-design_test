@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @charset "utf-8";
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        font-family: "맑은 고딕";
+        font-size: 14px;
+        color: #333;
+        box-sizing: border-box;
+        background-color: #333;
+    }
+    img {
+        vertical-align: top;
+    }
+    .slidewrapper {
+        overflow: hidden;
+    }
+    .container {
+        display: flex;
+        width: 300vw;
+        /* transform: translateX(-100vw); */
+        transition: all 0.5s;
+    }
+    .slide {
+        width: 100vw;
+    }
+    .slide img {
+        width: 100%;
+    }
+</style>
+<body>
+    <div class="slides slidewrapper">
+        <ul class="container">
+            <li class="slide">
+                <a href="">
+                    <img src="./image/car1.png" alt="">
+                </a>
+            </li>
+            <li class="slide">
+                <a href="">
+                    <img src="./image/car2.png" alt="">
+                </a>
+            </li>
+            <li class="slide">
+                <a href="">
+                    <img src="./image/car3.png" alt="">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script>
+        let slideContainer = document.querySelector('.container')
+        let slide = document.querySelector('.slide')
+        let slideCount = slide.length
+        var 슬라이드이동거리 = 0;
+        // 1초마다 슬라이드를 이동시키는 함수입니다.
+        setInterval(function() {    
+        console.log(슬라이드이동거리);
+            if ( 슬라이드이동거리 == 0){
+                슬라이드이동거리 -= 100;
+                slideContainer.style.transform = `translateX(${슬라이드이동거리}vw)`
+            } else if (슬라이드이동거리 == -100){
+                슬라이드이동거리 -= 100
+                slideContainer.style.transform = `translateX(${슬라이드이동거리}vw)`
+            } else if (슬라이드이동거리 == -200){
+                슬라이드이동거리 += 200
+                slideContainer.style.transform = `translateX(${슬라이드이동거리}vw)`
+            }
+        }, 2000);
+
+    </script>
+</body>
+</html>

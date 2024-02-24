@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+     * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        font-family: '맑은고딕';
+        font-size: 14px;
+        color: #333;
+    }
+    /*custom*/
+    .cf::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    a {
+        text-decoration: none;
+    }
+    nav {
+        width: 720px;
+        position: relative;
+    }
+    nav > ul {
+        display: flex;
+    }
+    nav > ul > li {
+        line-height: 40px;
+        width: 180px;
+        text-align: center;
+        position: relative;
+    }
+    nav > ul > li a {
+        color: #fff;
+        display: block;
+        background-color: #333;
+    }
+    nav ul ul li a {
+        background-color: #fff;
+        display: block;
+        color: #333;
+    }
+    nav > ul > li a:hover {
+        background-color: #3498db;
+    }
+    nav > ul > li > ul {
+        position: absolute;
+        width: 100%;
+        display: none;
+    }
+    </style>
+    <nav>
+        <ul class="nav-menu">
+            <li><a class="main-menu" href="">MENU-1</a>
+                <ul class="sub-menu">
+                    <li><a href="">SubMenu-1</a></li>
+                    <li><a href="">SubMenu-2</a></li>
+                    <li><a href="">SubMenu-3</a></li>
+                    <li><a href="">SubMenu-4</a></li>
+                </ul>
+            </li>
+            <li><a class="main-menu" href="">MENU-2</a>
+                <ul class="sub-menu">
+                    <li><a href="">SubMenu-1</a></li>
+                    <li><a href="">SubMenu-2</a></li>
+                    <li><a href="">SubMenu-3</a></li>
+                    <li><a href="">SubMenu-4</a></li>
+                </ul>
+            </li>
+            <li><a class="main-menu" href="">MENU-3</a>
+                <ul class="sub-menu">
+                    <li><a href="">SubMenu-1</a></li>
+                    <li><a href="">SubMenu-2</a></li>
+                    <li><a href="">SubMenu-3</a></li>
+                    <li><a href="">SubMenu-4</a></li>
+                </ul>
+            </li>
+            <li><a  class="main-menu" href="">MENU-4</a>
+                <ul class="sub-menu">
+                    <li><a href="">SubMenu-1</a></li>
+                    <li><a href="">SubMenu-2</a></li>
+                    <li><a href="">SubMenu-3</a></li>
+                    <li><a href="">SubMenu-4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+     
+<script>
+let realMenu = document.querySelector('.nav-menu')
+let mainMenu = document.querySelectorAll('.main-menu');
+let subMenu = document.querySelectorAll('.sub-menu')
+let 올렸냐 = false
+
+realMenu.addEventListener('mousemove', function (e) {
+    올렸냐 = true
+    console.log(올렸냐)
+    console.log(e.target)
+    if (e.target == mainMenu[0]) {
+        subMenu[0].style.display = 'block'
+    } else if (e.target == mainMenu[1]) {
+        subMenu[1].style.display = 'block'
+    } else if (e.target == mainMenu[2]) {
+        subMenu[2].style.display = 'block'
+    } else if (e.target == mainMenu[3]) {
+        subMenu[3].style.display = 'block'
+    }
+})
+
+realMenu.addEventListener('mousedown', function (e) {
+    if (e.target == mainMenu[0]) {
+        subMenu[0].style.display = 'none'
+    } else if (e.target == mainMenu[1]) {
+        subMenu[1].style.display = 'none'
+    } else if (e.target == mainMenu[2]) {
+        subMenu[2].style.display = 'none'
+    } else if (e.target == mainMenu[3]) {
+        subMenu[3].style.display = 'none'
+    }
+})
+
+// 서브메뉴에서 마우스가 벗어났을 때 display none 처리
+for (let i = 0; i < subMenu.length; i++) {
+    subMenu[i].addEventListener('mouseleave', function () {
+        subMenu[i].style.display = 'none';
+    });
+}
+
+</script>
+</body>
+</html>
