@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        font-family: '맑은고딕';
+        font-size: 14px;
+        color: #333;
+    }
+    /*custom*/
+    .cf::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    main .notice {
+        background-color: #fff;
+    }
+    main .banner {
+        background-color: #666;
+    }
+    main .quick_links {
+        background-color: #555;
+    }
+    main {
+        height: 200px;
+        background-color: #fff;
+        padding: 10px 0;
+        box-sizing: border-box;
+    }
+    .tabmenu {
+        display: flex;
+    }
+    .tabmenu li a {
+        display: block;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        border-bottom: none;
+        background-color: #ccc;
+    }
+    .tabmenu li.active a {
+        background-color: #fff;
+    }
+    .tabcontent {
+        padding: 10px;
+        border: 1px solid #ccc;
+        position: relative;
+        height: 150px;
+        box-sizing: border-box;
+    }
+    .tabcontent > div {
+        position: absolute;
+        left: 0;
+        right: 0;
+        display: none;
+    }
+    .tabcontent > div.active {
+        display: block;
+    }
+    /**#notice {
+        padding: 0 10px;
+    }
+    #notice li {
+        line-height: 30px;
+    }
+    #notice li span{
+        display: flex;
+        float: right;
+    }
+    #notice li:nth-child(even){
+        background-color: #ccc;
+    }
+    #notice li a:hover {
+        font-weight: bold;
+    }
+    #gallery {
+        padding: 20px;
+    }
+    #gallery ul li {
+        float: left;
+        margin-right: 40px;
+    }
+    #gallery ul li:last-child {
+        margin-right: 0;
+    } 
+    **/
+    #notice {
+        padding: 5px 10px;
+    }
+    #notice li {
+        line-height: 30px;
+    }
+    #notice li span {
+        float: right;
+    }
+    #notice li:nth-child(even){
+        background-color: #ccc;
+    }
+    #notice li a:hover {
+        font-weight: bold;
+    }
+    #gallery {
+        /* padding: 20px; */
+    }
+    #gallery ul li {
+        float: left;
+        margin-right: 40px;
+    }
+    #gallery ul li:last-child {
+        margin-right: 0;
+    }
+    .tabmenu {
+        position: relative;
+        z-index: 1;
+        top: 1px;
+    }
+    </style>
+    <main class="cf">
+        <section class="notice">
+            <ul class="tabmenu cf">
+                <li class="active">
+                    <a href="#notice" id="notice">공지사항</a></li>
+                <li class="">
+                    <a href="#gallery" id="gallery">갤러리</a>
+                </li>
+            </ul>
+            <div class="tabcontent">
+                <div id="notice" class="">
+                    <ul>
+                        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit enim sapiente, officia itaque sed laborum, omnis quod ipsum rerum totam, eum iste non. Similique quas et suscipit, assumenda vel eaque?</a></li>
+                        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit enim sapiente, officia itaque sed laborum, omnis quod ipsum rerum totam, eum iste non. Similique quas et suscipit, assumenda vel eaque?</a></li>
+                        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit enim sapiente, officia itaque sed laborum, omnis quod ipsum rerum totam, eum iste non. Similique quas et suscipit, assumenda vel eaque?</a></li>
+                        <li><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit enim sapiente, officia itaque sed laborum, omnis quod ipsum rerum totam, eum iste non. Similique quas et suscipit, assumenda vel eaque?</a></li>
+                    </ul>
+                </div>
+                <div id="gallery" class="active">
+                    <ul class="cf">
+                        <li><a href=""><img src="http://via.placeholder.com/120x120" alt=""></a></li>
+                        <li><a href=""><img src="http://via.placeholder.com/120x120" alt=""></a></li>
+                        <li><a href=""><img src="http://via.placeholder.com/120x120" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="banner"></section>
+        <section class="quick_links"></section>
+    </main>
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+   "target": "es5", // 'es3', 'es5', 'es2015', 'es2016', 'es2017','es2018', 'esnext' 가능
+   "removeComments": true, //컴파일시 주석제거  //switch문 이상하면 에러내기 
+  }
+ }
