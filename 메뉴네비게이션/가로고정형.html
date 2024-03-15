@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../normalize.css">
+</head>
+<body>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        font-family: '맑은고딕';
+        font-size: 14px;
+        color: #333;
+        box-sizing: border-box;
+        }
+        .nav-menu {
+            display: flex;
+        }
+        .main-menu {
+            display: block;
+            padding: 20px 70px;
+            background-color: #333;
+            text-align: center;
+            color: #fff;
+        }
+        nav > ul > li {
+            position: relative;
+        }
+        .sub-menu {
+            position: absolute;
+            display: none;
+            left: 0;
+        }
+        .sub-menu a {
+            text-align: center;
+            display: block;
+            line-height: 40px;
+            padding: 0px 70px;
+        }
+        nav a:hover {
+            background-color: #3498db;
+            color: #fff;
+        }
+    </style>
+    <nav>
+        <ul class="nav-menu">
+            <li><a class="main-menu" href="">MENU-1</a>
+                <ul class="sub-menu">
+                    <li><a href="">SubMenu-1</a></li>
+                    <li><a href="">SubMenu-2</a></li>
+                    <li><a href="">SubMenu-3</a></li>
+                    <li><a href="">SubMenu-4</a></li>
+                </ul>
+            </li>
+            <li><a class="main-menu" href="">MENU-2</a>
+                <ul class="sub-menu">
+                    <li><a href="">SubMenu-1</a></li>
+                    <li><a href="">SubMenu-2</a></li>
+                    <li><a href="">SubMenu-3</a></li>
+                    <li><a href="">SubMenu-4</a></li>
+                </ul>
+            </li>
+            <li><a class="main-menu" href="">MENU-3</a>
+                <ul class="sub-menu">
+                    <li><a href="">SubMenu-1</a></li>
+                    <li><a href="">SubMenu-2</a></li>
+                    <li><a href="">SubMenu-3</a></li>
+                    <li><a href="">SubMenu-4</a></li>
+                </ul>
+            </li>
+            <li><a  class="main-menu" href="">MENU-4</a>
+                <ul class="sub-menu">
+                    <li><a href="">SubMenu-1</a></li>
+                    <li><a href="">SubMenu-2</a></li>
+                    <li><a href="">SubMenu-3</a></li>
+                    <li><a href="">SubMenu-4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <script>
+        let Nav = document.querySelector('.nav-menu')
+        let mainMenu = document.querySelectorAll('.main-menu')
+        let subMenu = document.querySelectorAll('.sub-menu')
+        Nav.addEventListener('mousemove', function(e){
+            if (e.target == mainMenu[0]) {
+        subMenu[0].style.display = 'block'
+    } else if (e.target == mainMenu[1]) {
+        subMenu[1].style.display = 'block'
+    } else if (e.target == mainMenu[2]) {
+        subMenu[2].style.display = 'block'
+    } else if (e.target == mainMenu[3]) {
+        subMenu[3].style.display = 'block'
+    }
+        })
+    </script>
+</body>
+</html>

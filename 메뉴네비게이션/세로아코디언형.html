@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        font-family: '맑은고딕';
+        font-size: 14px;
+        color: #333;
+    }
+    nav {
+        background-color: #333;
+        width: 180px;
+        margin: 10px 0 0 10px;
+    }
+    nav > ul li {
+        line-height: 40px;
+        text-align: center;
+    }
+    nav > ul  ul {
+        background-color: #ccc;
+        display: none;
+    }
+    nav > ul li a {
+        display: block;
+        color: #fff;
+    }
+    nav > ul > li > a:hover {
+        background-color: #930930;
+        color: #ffff00;
+    }
+    nav ul ul a:hover {
+        background-color: #ebebeb;
+        color: #555;
+    }
+    </style>
+    <nav>
+        <ul>
+            <li><a href="">MENU01</a>
+              <ul>
+                <li><a href="">SUBMENU01</a></li>
+                <li><a href="">SUBMENU02</a></li>
+                <li><a href="">SUBMENU03</a></li>
+                <li><a href="">SUBMENU04</a></li>
+              </ul>
+            </li>
+            <li><a href="">MENU02</a>
+              <ul>
+                <li><a href="">SUBMENU01</a></li>
+                <li><a href="">SUBMENU02</a></li>
+                <li><a href="">SUBMENU03</a></li>
+                <li><a href="">SUBMENU04</a></li>
+              </ul>
+            </li>
+            <li><a href="">MENU03</a>
+              <ul>
+                <li><a href="">SUBMENU01</a></li>
+                <li><a href="">SUBMENU02</a></li>
+                <li><a href="">SUBMENU03</a></li>
+                <li><a href="">SUBMENU04</a></li>
+              </ul>
+            </li>
+            <li><a href="">MENU04</a>
+              <ul>
+                <li><a href="">SUBMENU01</a></li>
+                <li><a href="">SUBMENU02</a></li>
+                <li><a href="">SUBMENU03</a></li>
+                <li><a href="">SUBMENU04</a></li>
+              </ul>
+            </li>
+        </ul>
+    </nav>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        let mainMenu = $('nav > ul > li');
+        mainMenu.mouseover(function(){
+            $(this).find('ul').stop().slideDown();
+        }).mouseout(function(){
+            $(this).fin('ul').stop().slideUp();
+        });
+    </script>
+</body>
+</html>
